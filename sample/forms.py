@@ -5,7 +5,7 @@ class SampleForm(forms.ModelForm):
     """サンプルフォーム"""
     class Meta:
         model = Sample
-    fields = ['message']
-        widgets = {
-            'messsage': forms.Textarea(attrs={'placeholder': 'メッセージ'})
-        }
+        fields = ('message',)
+    widgets = {
+        'messsage': forms.Textarea(attrs={'placeholder': 'メッセージ'})
+    }

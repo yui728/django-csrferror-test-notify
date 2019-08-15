@@ -4,15 +4,13 @@ from django.urls import reverse
 from django.views import View
 
 class SampleFormView(View):
-    template_name = 'form.html'
-    form_class = SampleForm
 
     # Create your views here.
     def get(self, request, *args, **kwargs):
         context = {
             'form': SampleForm()
         }
-        return render(request, self.template_name, context=context)
+        return render(request, 'sample/index.html', context)
 
     def post(self, request, *args, **kwargs):
         form = SampleForm(request.POST)
@@ -23,5 +21,6 @@ class SampleFormView(View):
         context = {
             'form': form
         }
-        return render(request, reverse('sample:index'), context=context)
+        return render(request, 'sample/index.html', context)
 
+sampleFromView = SampleFormView.as_view()
