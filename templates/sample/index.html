@@ -3,7 +3,7 @@
 {% block title %}Form Sample{% endblock %}
 
 {% block body %}
-<form method="POST" action="{{ url 'sample:index' }}">
+<form method="POST" action="{% url 'sample:index' %}">
     {% for field in form %}
     <label>{{ field.label_tag }}</label>
     {{ field }}
