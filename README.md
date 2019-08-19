@@ -1,2 +1,2 @@
-# django-csrferror-test-notify
+# DjangoテストフレームワークによるCSRFトークンエラー検知
 DjangoテストフレームワークでCSRFトークンエラーを検出する
