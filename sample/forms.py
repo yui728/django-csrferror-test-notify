@@ -6,6 +6,6 @@ class SampleForm(forms.ModelForm):
     class Meta:
         model = Sample
         fields = ('message',)
-    widgets = {
-        'messsage': forms.Textarea(attrs={'placeholder': 'メッセージ'})
-    }
+        widgets = {
+            'message': forms.Textarea(attrs={'placeholder': 'メッセージ'})
+        }
