@@ -4,8 +4,12 @@ from django.test.client import Client
 
 class SampleViewTest(TestCase):
 
-    def _pre_setup(self):
-        super()._pre_setup()
+    # def _pre_setup(self):
+    #     super()._pre_setup()
+    #     self.client = Client(enforce_csrf_checks=True)
+
+    def setUp(self):
+        super().setUp()
         self.client = Client(enforce_csrf_checks=True)
 
     def test_get_index_01(self):
